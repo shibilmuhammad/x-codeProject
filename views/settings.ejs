@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%-include("header.ejs")%>
+    <form id="settingsForm" class="min-h-screen min-w-full bg-[#616973] px-10 flex">
+      <%-include("sideBar") %>
+      <div class="mt-28 ml-10">
+        <h1 class="text-xl text-white font-semibold">Settings</h1>
+        <div class="space-y-2 mt-4">
+          <p class="text-sm font-light text-white">
+            maximum allowed time for voucher (In days)
+          </p>
+          <input
+            type="number"
+            required
+            class="rounded-md bg-transparent w-full border-[.6px] border-[#949596] text-white px-2"
+            name="max_expiry_time"
+            id="max_expiry_time"
+          />
+        </div>
+        <div class="flex space-x-3">
+          <div class="space-y-2 mt-4">
+            <p class="text-sm font-light text-white">Voucher Width (px)</p>
+            <input
+            required
+              type="text"
+              class="rounded-md bg-transparent px-2 text-white w-full border-[.6px] border-[#949596]"
+              name="voucher_width"
+              id="voucher_width"
+            />
+          </div>
+          <div class="space-y-2 mt-4">
+            <p class="text-sm font-light text-white">Voucher height (px)</p>
+            <input
+              type="text"
+              required
+              class="rounded-md px-2 text-white bg-transparent w-full border-[.6px] border-[#949596]"
+              name="voucher_height"
+              id="voucherHeight"
+            />
+          </div>
+        </div>
+        <div class="mt-2">
+          <label for="title-range" class="text-sm font-light text-white">
+            Title Size: <span id="titleSizeValue" class="font-semibold">20</span> px
+          </label>
+          <input
+          required
+            id="title-range"
+            name="title_font_size"
+            type="range"
+            min="8"
+            max="25"
+            value="21"
+            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+          />
+        </div>
+        
+        <div class="mt-2">
+          <label for="text-range" class="text-sm font-light text-white">
+            Normal Text Size: <span id="textSizeValue" class="font-semibold">16</span> px
+          </label>
+          <input
+          name="text_font_size"
+          required
+            id="text-range"
+            type="range"
+            min="8"
+            max="20"
+            value="10"
+            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+          />
+        </div>
+        
+
+        <div class="w-full flex space-x-4 mt-8 font-medium ">
+          <button type="submit" class="w-4/12 bg-[#EBEEE2] hover:bg-[#D6DAC9] py-1 rounded-md">save</button>
+          <button type="reset" class="w-4/12 bg-[#949596] hover:bg-[#888B8E] text-white py-1 rounded-md">cancel</button>
+        </div>
+        <div class="text-xs font-normal text-white m-3">
+          <strong><sup>*</sup>Important:</strong> These settings apply only when exporting the voucher to PDF
+        </div>
+      </div>
+     
+    </form>
+  </body>
+  <script src="../javascript/settings.js"></script>
+</html>
