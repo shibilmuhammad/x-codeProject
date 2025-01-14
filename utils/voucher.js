@@ -3,7 +3,7 @@ const { getSettingsDetails } = require("./settings");
 const sql = require("mssql");
 const { config } = require("../models/db");
 const path = require("path");
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer-core');
 const fs = require("fs"); // 
 async function generatePdfFromHtml(req) {
     try {
