@@ -261,7 +261,7 @@ document.querySelectorAll(".print-btn").forEach((button) => {
               <h2>${voucher.offer_percentage}% OFF</h2>
               <h3>Coupon</h3>
               <div>
-                <img class="qrCodeImg" src="http://localhost:3000/assets/qrcodes/${voucher.qr_code_path}" alt="QR Code" />
+                <img class="qrCodeImg" src="https://x-codeproject.onrender.com/assets/qrcodes/${voucher.qr_code_path}" alt="QR Code" />
               </div>
               <small>Valid until ${new Date(voucher.expiry_date).toLocaleDateString('en-GB', {
                 weekday: 'short',
