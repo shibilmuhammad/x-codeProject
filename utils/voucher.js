@@ -28,8 +28,8 @@ async function generatePdfFromHtml(req) {
       }
   
       const browser = await puppeteer.launch({
-        executablePath: '/usr/bin/chromium-browser',  
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],  
+        executablePath: 'https://chrome.browserless.io', 
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
       });
       const page = await browser.newPage();
   
