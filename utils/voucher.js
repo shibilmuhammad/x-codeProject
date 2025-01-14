@@ -35,7 +35,7 @@ async function generatePdfFromHtml(req) {
       const page = await browser.newPage();
   
       try {
-        await page.goto(`http://localhost:3000/voucher-template/${code}`, {
+        await page.goto(`https://xcode.identitie.in/voucher-template/${code}`, {
           waitUntil: "networkidle0",
           timeout: 30000,
         });
