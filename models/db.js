@@ -1,10 +1,11 @@
 const sql = require('mssql');
+require('dotenv').config();
 
 const config = {
-    user: 'SA',
-    password: 'Shibil@8943',
-    server: 'localhost',
-    database: 'VoucherDB',
+    user: process.env.DB_USER,
+    password:process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_NAME,
     options: {
         encrypt: true,
         trustServerCertificate: true 
