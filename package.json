@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node App.js",
     "dev": "nodemon app.js",
     "build:css": "tailwindcss build public/css/tailwind.css -o public/css/styles.css",
-    "watch:css": "tailwindcss build public/css/tailwind.css -o public/css/styles.css --watch"
+    "watch:css": "tailwindcss build public/css/tailwind.css -o public/css/styles.css --watch",
+    "postinstall": "apt-get update && apt-get install -y wget curl unzip && npm install puppeteer"
   },
   "keywords": [],
   "author": "",
