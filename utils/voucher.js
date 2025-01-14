@@ -3,7 +3,7 @@ const { getSettingsDetails } = require("./settings");
 const sql = require("mssql");
 const { config } = require("../models/db");
 const path = require("path");
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const fs = require("fs"); // 
 async function generatePdfFromHtml(req) {
     try {
@@ -28,8 +28,8 @@ async function generatePdfFromHtml(req) {
       }
   
       const browser = await puppeteer.launch({
-        executablePath: 'https://chrome.browserless.io', 
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        headless: true,  
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],  
       });
       const page = await browser.newPage();
   
